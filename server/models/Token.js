@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const TokenSchema = new mongoose.Schema({
     userId: { type: String, required: true },
@@ -6,4 +6,5 @@ const TokenSchema = new mongoose.Schema({
     refreshToken: { type: String, required: true },
 });
 
-module.exports = mongoose.model('Token', TokenSchema);
+const Token = mongoose.model('Token', TokenSchema);
+export default Token;
