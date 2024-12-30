@@ -2,6 +2,7 @@ import {google} from "googleapis";
 import Token from '../models/Token.js';
 import Event from '../models/Event.js';
 import {CLIENT_ID, CLIENT_SECRET} from "../config/constants.js";
+import {errorHandler} from "../utils/errorHandler.js";
 
 export const createEvent = async (req, res) => {
     const { userId, eventName, startDateTime, endDateTime } = req.body;
